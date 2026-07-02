@@ -1,4 +1,4 @@
-# Hybrid TinyStories — Sub-1M Hybrid Language Model
+# Hybrid TinyStories — Sub-0.3M Hybrid Language Model
 
 A hybrid Mamba-2 SSM + Transformer language model that produces coherent English
 stories at **248K parameters**, less than a third of the size of a pure
@@ -9,7 +9,6 @@ transformer that failed to produce coherent text at 800K.
 | Model | Params | Val Loss | Val PPL | Coherent English? |
 |-------|--------|----------|---------|-------------------|
 | Pure Transformer (baseline) | 800K | 3.40 | ~30 | No — stuck at a permanent wall |
-| Hybrid + Muon (other repo) | 652K | 2.17 | 8.85 | Yes — multi-paragraph stories |
 | Hybrid + Muon (this repo) | 248K | 2.33 | 10.3 | Yes — coherent sentences & dialogue |
 
 The 248K model writes stories with named characters, dialogue, emotional
