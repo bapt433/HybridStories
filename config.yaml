@@ -1,0 +1,64 @@
+data:
+  data_dir: data
+  seq_len: 128
+eval:
+  eval_batches: 10
+  eval_every: 500
+  log_every: 50
+  save_dir: checkpoints
+  save_every: 2000
+generation:
+  sample_every: 1000
+  sample_max_tokens: 60
+  sample_prompt: Once upon a time
+  sample_temperature: 0.8
+  sample_top_p: 0.9
+inference:
+  checkpoint: checkpoints/best.pt
+  max_new_tokens: 128
+  temperature: 0.8
+  top_p: 0.9
+model:
+  block_sharing: true
+  d_conv: 4
+  d_model: 32
+  d_state: 4
+  mlp_ratio: 2.77
+  n_heads_kv: 1
+  n_heads_q: 1
+  n_layers: 17
+  n_meta_tokens: 2
+  rope_theta: 500000.0
+  ssm_expand: 2
+  use_checkpoint: false
+  vocab_size: 2048
+training:
+  betas:
+  - 0.9
+  - 0.95
+  curriculum: true
+  dtype: bfloat16
+  ema_decay: 0.999
+  eps: 1.0e-08
+  grad_accum_steps: 1
+  grad_clip: 0.5
+  grad_noise: false
+  grad_noise_std: 0.001
+  hard_upsample: 3.0
+  lr_schedule: wsd
+  max_lr: 0.0003
+  max_steps: 20000
+  micro_batch_size: 128
+  min_lr: 1.0e-05
+  muon_lr: 0.02
+  muon_momentum: 0.9
+  muon_ns_steps: 3
+  n_rounds: 2
+  resume_from: null
+  swa: true
+  swa_n_avg: 10
+  swa_start_frac: 0.75
+  use_ema: true
+  use_muon: true
+  warmup_steps: 100
+  weight_decay: 0.01
