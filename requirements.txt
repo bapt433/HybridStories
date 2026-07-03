@@ -1,0 +1,5 @@
+torch
+numpy
+tokenizers
+pyyaml
+requests
